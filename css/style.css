@@ -1,0 +1,253 @@
+/* styles.css - Dieses CSS in separate Datei speichern */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Navigation Styles */
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.nav-link {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: block;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.link-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.link-link {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    display: inline-block; 
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.link-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.link-link.active {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 2rem 2rem;
+}
+
+.page {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Typography Styles - Einheitliches Design */
+h2 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+h3 {
+    color: #34495e;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid #667eea;
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.1), transparent);
+    padding: 0.5rem 0 0.5rem 1rem;
+    border-radius: 0 10px 10px 0;
+}
+
+p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    background: rgba(102, 126, 234, 0.05);
+    padding: 1.2rem;
+    border-radius: 12px;
+    border-left: 3px solid #667eea;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.link-container h2 {
+    text-align: left;
+    color: #2c3e50;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-sizing: border-box;
+}
+
+/* Den Unterstrich für link-container entfernen */
+.link-container h2::after {
+    display: none;
+}
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #2c3e50;
+    outline: none;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+}
+
+.search-input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.search-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #2c3e50;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.search-btn:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 140px 1rem 1rem;
+    }
+
+    .page {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
